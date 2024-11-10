@@ -9,10 +9,10 @@ export default function Home() {
         <HeroHighlightCustom />
       </section>
       <section>
-        <BackgroundBeamsCustom />
+        <TimelineCustom />
       </section>
       <section>
-        <TimelineCustom />
+        <BackgroundBeamsCustom />
       </section>
     </main>
   );
