@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { FloatingDockCustom } from "./FloatingDockCustom";
 
 export function SidebarCustom({ sidebarContent }: { sidebarContent: any }) {
     const links = [
