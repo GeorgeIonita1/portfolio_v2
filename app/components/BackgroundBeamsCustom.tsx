@@ -12,7 +12,6 @@ export function BackgroundBeamsCustom() {
                     <TypewriterEffectCustom />
                 </div>
             </div>
-            <FloatingDockCustom />
             <BackgroundBeams />
         </div>
     );
