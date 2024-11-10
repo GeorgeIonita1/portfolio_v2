@@ -1,7 +1,6 @@
 "use client";
-import { FloatingDockCustom } from "./FloatingDockCustom";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
-export function TypewriterEffectSmootCustom() {
+export function TypewriterEffectCustom() {
     const words = [
         {
             text: "Let's",
@@ -18,9 +17,8 @@ export function TypewriterEffectSmootCustom() {
         },
     ];
     return (
-        <div className="flex flex-col items-center justify-center h-[40rem]  ">
+        <div className="flex flex-col items-center justify-center">
             <TypewriterEffectSmooth words={words} />
-            <FloatingDockCustom />
         </div>
     );
 }
