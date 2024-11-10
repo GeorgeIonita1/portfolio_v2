@@ -8,10 +8,10 @@ export default function Home() {
       <section>
         <HeroHighlightCustom />
       </section>
-      <section>
+      <section id="experience">
         <TimelineCustom />
       </section>
-      <section>
+      <section id="contact">
         <BackgroundBeamsCustom />
       </section>
     </main>
