@@ -7,7 +7,6 @@ import {
     IconUserBolt,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { BackgroundGradient } from "./ui/background-gradient";
 
@@ -42,9 +41,9 @@ export function SidebarCustom({ sidebarContent }: { sidebarContent: any }) {
         >
             <Sidebar open={open} setOpen={setOpen} animate={false}>
                 <SidebarBody>
-                    <div className="flex flex-col pt-16 gap-8">
+                    <div className="flex flex-col pt-16 gap-14">
                         <Logo />
-                        <div className="mt-8 flex flex-col gap-2">
+                        <div className="flex flex-col gap-2 mx-auto">
                             {links.map((link, idx) => (
                                 <SidebarLink key={idx} link={link} />
                             ))}
@@ -52,7 +51,7 @@ export function SidebarCustom({ sidebarContent }: { sidebarContent: any }) {
                     </div>
                 </SidebarBody>
             </Sidebar>
-            <Dashboard sidebarContent={sidebarContent} />
+            {sidebarContent}
         </div>
     );
 }
@@ -62,28 +61,9 @@ export const Logo = () => {
             href="#"
             className="font-normal flex justify-center relative z-20"
         >
-            <BackgroundGradient className="bg-white dark:bg-zinc-900 rounded-full">
+            <BackgroundGradient className="rounded-full">
                 <Image alt="George Ionita" src="/Avatar_sample.jpg" width={200} height={200} className="rounded-full aspect-square object-cover" />
             </BackgroundGradient>
         </Link>
-    );
-};
-export const LogoIcon = () => {
-    return (
-        <Link
-            href="#"
-            className="font-normal flex space-x-2 items-center text-sm text-black py-1 relative z-20"
-        >
-            <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm flex-shrink-0" />
-        </Link>
-    );
-};
-
-// Dummy dashboard component with content
-const Dashboard = ({ sidebarContent }: { sidebarContent: any }) => {
-    return (
-        <div>
-            {sidebarContent}
-        </div>
     );
 };
