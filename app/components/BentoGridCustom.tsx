@@ -303,7 +303,7 @@ const items = [
             </span>
         ),
         header: <SkeletonOne />,
-        className: "md:col-span-1",
+        className: "col-span-1",
         icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     },
     {
@@ -314,7 +314,7 @@ const items = [
             </span>
         ),
         header: <SkeletonTwo />,
-        className: "md:col-span-1",
+        className: "col-span-1",
         icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     },
     {
@@ -325,7 +325,7 @@ const items = [
             </span>
         ),
         header: <SkeletonThree />,
-        className: "md:col-span-1",
+        className: "col-span-1",
         icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     },
     {
@@ -336,7 +336,7 @@ const items = [
             </span>
         ),
         header: <SkeletonFour />,
-        className: "md:col-span-2",
+        className: "col-span-1",
         icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     },
 
@@ -348,7 +348,7 @@ const items = [
             </span>
         ),
         header: <SkeletonFive />,
-        className: "md:col-span-1",
+        className: "col-span-1",
         icon: <IconBoxAlignRightFilled className="h-4 w-4 text-neutral-500" />,
     },
 ];
