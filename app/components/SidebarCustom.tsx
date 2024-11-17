@@ -1,15 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import { Sidebar, SidebarBody } from "./ui/sidebar";
-import {
-    IconBrandTabler,
-    IconSettings,
-    IconUserBolt,
-} from "@tabler/icons-react";
 import Link from "next/link";
 import Image from "next/image";
 import { BackgroundGradient } from "./ui/background-gradient";
-import { FloatingDockCustom } from "./FloatingDockCustom";
 
 export function SidebarCustom({ sidebarContent }: { sidebarContent: any }) {
     const [open, setOpen] = useState(false);
@@ -29,12 +23,10 @@ export function SidebarCustom({ sidebarContent }: { sidebarContent: any }) {
                                 <Image alt="George Ionita" src="/Avatar_sample.jpg" width={200} height={200} className="rounded-full aspect-square object-cover" />
                             </BackgroundGradient>
                         </Link>
-                        <FloatingDockCustom />
                     </div>
                 </SidebarBody>
             </Sidebar>
             {sidebarContent}
         </div>
     );
-
 };
