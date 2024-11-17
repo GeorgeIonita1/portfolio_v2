@@ -2,7 +2,6 @@
 import React from "react";
 import { BackgroundBeams } from "./ui/background-beams";
 import { TypewriterEffectCustom } from "./TypewritterEffectCustom";
-import { FloatingDockCustom } from "./FloatingDockCustom";
 
 export function BackgroundBeamsCustom() {
     return (
