@@ -1,9 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { Sidebar, SidebarBody } from "./ui/sidebar";
-import Link from "next/link";
 import Image from "next/image";
 import { BackgroundGradient } from "./ui/background-gradient";
+import { IconBrandGithub, IconBrandLinkedin, IconHome, IconUser } from "@tabler/icons-react";
+import Link from "next/link";
 
 export function SidebarCustom({ sidebarContent }: { sidebarContent: any }) {
     const [open, setOpen] = useState(false);
@@ -14,15 +15,22 @@ export function SidebarCustom({ sidebarContent }: { sidebarContent: any }) {
         >
             <Sidebar open={open} setOpen={setOpen} animate={false}>
                 <SidebarBody>
-                    <div className="flex flex-col items-center gap-14">
-                        <Link
-                            href="#"
-                            className="font-normal relative z-20"
-                        >
-                            <BackgroundGradient className="rounded-full" containerClassName="aspect-square flex justify-center items-center w-[200px]">
-                                <Image alt="George Ionita" src="/Avatar_sample.jpg" width={200} height={200} className="rounded-full aspect-square object-cover" />
-                            </BackgroundGradient>
+                    <BackgroundGradient className="rounded-full" containerClassName="aspect-square flex justify-center items-center w-[200px]">
+                        <Image alt="George Ionita" src="/Avatar_sample.jpg" width={200} height={200} className="rounded-full aspect-square object-cover" />
+                    </BackgroundGradient>
+                    <div className="grid grid-cols-2 gap-2">
+                        <Link href='#' onClick={() => setOpen(false)}>
+                            <IconHome width={30} height={30} />
                         </Link>
+                        <ExternalButton url="https://google.com">
+                            <IconBrandGithub width={30} height={30} />
+                        </ExternalButton>
+                        <ExternalButton url="https://youtube.com">
+                            <IconBrandLinkedin width={30} height={30} />
+                        </ExternalButton>
+                        <ExternalButton url="https://google.ro">
+                            <IconUser width={30} height={30} />
+                        </ExternalButton>
                     </div>
                 </SidebarBody>
             </Sidebar>
@@ -30,3 +38,11 @@ export function SidebarCustom({ sidebarContent }: { sidebarContent: any }) {
         </div>
     );
 };
+
+function ExternalButton({ children, url }: { children: any, url: string }) {
+    return (
+        <a href={url} target="_blank">
+            {children}
+        </a>
+    );
+}

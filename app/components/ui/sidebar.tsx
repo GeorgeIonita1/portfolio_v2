@@ -84,20 +84,13 @@ export const DesktopSidebar = ({
     children,
     ...props
 }: React.ComponentProps<typeof motion.div>) => {
-    const { open, setOpen, animate } = useSidebar();
-
     return (
         <>
             <motion.div
                 className={cn(
-                    "h-full p-4 bg-neutral-100 dark:bg-neutral-800 w-[300px] md:fixed md:left-0 md:flex md:flex-col md:justify-center max-md:hidden",
+                    "h-full p-4 bg-neutral-100 dark:bg-neutral-800 w-[300px] md:fixed md:left-0 flex flex-col justify-center items-center gap-8 max-md:hidden",
                     className
                 )}
-                animate={{
-                    width: animate ? (open ? "300px" : "60px") : "300px",
-                }}
-                onMouseEnter={() => setOpen(true)}
-                onMouseLeave={() => setOpen(false)}
                 {...props}
             >
                 {children}
@@ -137,7 +130,7 @@ export const MobileSidebar = ({
                                 ease: "easeInOut",
                             }}
                             className={cn(
-                                "fixed inset-0 bg-white dark:bg-neutral-900 p-10 z-[100] flex flex-col justify-center",
+                                "fixed inset-0 bg-white dark:bg-neutral-900 p-10 z-[100] flex flex-col justify-center items-center gap-8",
                                 className
                             )}
                         >
